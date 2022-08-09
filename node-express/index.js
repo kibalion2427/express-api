@@ -13,6 +13,7 @@
   
   const status = require('./status/routes');
   const error = require('./error');
+  const search = require('./search/routes');
   
   
   app.use(cors());
@@ -21,6 +22,7 @@
   app.use(bodyParser.urlencoded({ extended: true }));
   
   app.use('/status', status);
+  app.use('/search', search);
 
   app.use(() => {
     error.routeNotFound();
