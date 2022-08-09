@@ -1,6 +1,7 @@
 exports.healthcheck = (req, res, next) => {
+  console.log('HEADERS: ', req.headers);
   const healthcheck = {
-    region: 'region 1',
+    region: process.env.ZONE || 'region 1',
     uptime: process.uptime(),
     timestamp: Date.now(),
   };

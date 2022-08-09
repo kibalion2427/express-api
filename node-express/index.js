@@ -1,4 +1,7 @@
 
+  const dotenv = require('dotenv');
+
+  dotenv.config();
   
   const express = require('express');
   
@@ -9,6 +12,7 @@
   const helmet = require('helmet');
   
   const status = require('./status/routes');
+  const error = require('./error');
   
   
   app.use(cors());
